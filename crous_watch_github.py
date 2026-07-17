@@ -43,6 +43,8 @@ def send_telegram_message(text):
 
 async def check_once():
     text = await get_page_text()
+    print(f"[DEBUG] Longueur du texte reçu : {len(text)}")
+    print(f"[DEBUG] Premiers 500 caractères : {text[:500]}")
     count = extract_count(text)
 
     if count is None:
