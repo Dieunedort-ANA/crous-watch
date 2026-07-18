@@ -6,7 +6,7 @@ from datetime import datetime
 from playwright.async_api import async_playwright
 
 # ============ CONFIG ============
-URL = "https://trouverunlogement.lescrous.fr/tools/47/search"
+URL = "https://trouverunlogement.lescrous.fr/tools/47/search?bounds=3.8070597_43.6533542_3.9413208_43.5667088&locationName=Montpellier"
 
 # Les valeurs viennent des "secrets" GitHub (voir instructions), pas écrites en dur ici
 TELEGRAM_BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
