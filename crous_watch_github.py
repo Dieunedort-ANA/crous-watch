@@ -18,8 +18,8 @@ async def get_page_text():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
-        await page.goto(URL, wait_until="networkidle", timeout=30000)
-        await page.wait_for_timeout(3000)
+        await page.goto(URL, wait_until="domcontentloaded", timeout=30000)
+        await page.wait_for_timeout(5000)
         text = await page.inner_text("body")
         await browser.close()
         return text
